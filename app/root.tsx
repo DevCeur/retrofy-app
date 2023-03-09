@@ -7,13 +7,19 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
+
+import tailwindStyles from "~/tailwind.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Retrofy | Make your retro meeting, more cool.",
   viewport: "width=device-width,initial-scale=1",
 });
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwindStyles },
+];
 
 const App = () => {
   return (
