@@ -1,7 +1,13 @@
+import { SignLayout } from "~/components/sign-layout";
+
 import { SignInView } from "~/views/sign-in-view";
 
 const SignInRoute = () => {
-  return <SignInView />;
+  return (
+    <SignLayout>
+      <SignInView />
+    </SignLayout>
+  );
 };
 
 export default SignInRoute;
