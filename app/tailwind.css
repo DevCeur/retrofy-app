@@ -22,3 +22,9 @@
     @apply bg-neutral-50;
   }
 }
+
+@layer components {
+  .base-button {
+    @apply h-[46px] text-sm font-medium px-6 flex justify-center items-center border border-transparent transition-colors duration-200;
+  }
+}
