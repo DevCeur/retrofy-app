@@ -13,7 +13,7 @@ import tailwindStyles from "~/tailwind.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Retrofy | Make your retro meeting, more cool.",
+  title: "Retrofy - Make your retro meeting, more cool.",
   viewport: "width=device-width,initial-scale=1",
 });
 
