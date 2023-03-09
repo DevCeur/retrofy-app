@@ -1,7 +1,12 @@
+import { SingFormWrapper } from "~/components/sign-form-wrapper";
+
 export const SignInView = () => {
   return (
-    <div>
-      <h1>Sign In</h1>
-    </div>
+    <SingFormWrapper
+      title="Sign In"
+      summary="Welcome Back! Nice to see you again"
+    >
+      <form>Sign In</form>
+    </SingFormWrapper>
   );
 };
