@@ -5,7 +5,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { ROUTE } from "~/utils/enum";
 
 export const loader: LoaderFunction = () => {
-  return redirect(ROUTE.SIGN_IN);
+  return redirect(ROUTE.SIGN_UP);
 };
 
 const HomeRoute = () => {
