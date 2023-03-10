@@ -2,9 +2,10 @@ import cn from "classnames";
 
 import { cva } from "class-variance-authority";
 import { useState, useRef, useEffect } from "react";
-import { RiLoader4Fill } from "react-icons/ri";
+import { RiLoader4Fill } from "react-icons/Ri";
 import { motion, AnimatePresence } from "framer-motion";
 
+import type { IconType } from "react-icons";
 import type { ButtonHTMLAttributes } from "react";
 import type { VariantProps } from "class-variance-authority";
 
@@ -44,6 +45,7 @@ const buttonStyles = cva("base-button", {
 });
 
 type ButtonProps = {
+  icon?: IconType;
   children: React.ReactNode;
   isLoading?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement> &
@@ -52,6 +54,7 @@ type ButtonProps = {
 export const Button = ({
   size,
   width,
+  icon: Icon,
   variant,
   children,
   isLoading,
@@ -97,8 +100,11 @@ export const Button = ({
             exit="exitted"
             variants={loadingVariants}
             transition={{ duration: 0.1 }}
+            className="flex items-center space-x-4"
           >
-            {children}
+            <span>{children}</span>
+
+            {Icon && <Icon />}
           </motion.span>
         )}
       </AnimatePresence>

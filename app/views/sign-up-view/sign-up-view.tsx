@@ -1,26 +1,25 @@
-import { useState } from "react";
-
 import { Button } from "~/components/button";
 import { TextInput } from "~/components/text-input";
 import { SingFormWrapper } from "~/components/sign-form-wrapper";
 
 export const SignUpView = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
   return (
     <SingFormWrapper
       title="Create Account"
-      summary="Fill the form and create an account, or use your Google or GitHub account!"
+      summary="Fill the form and create an account."
     >
       <form>
-        <div className="space-y-6">
-          <TextInput label="Email:" placeholder="I'm a text input" />
+        <div className="space-y-5 mb-8">
+          <TextInput type="email" name="email" placeholder="Email" />
+          <TextInput
+            type="password"
+            name="password"
+            placeholder="Password (+6 characters)"
+          />
         </div>
-      </form>
 
-      <Button isLoading={isLoading} onClick={() => setIsLoading(true)}>
-        Really long button
-      </Button>
+        <Button width="full">Continue</Button>
+      </form>
     </SingFormWrapper>
   );
 };
