@@ -5,7 +5,7 @@ type SignLayoutProps = {
 export const SignLayout = ({ children }: SignLayoutProps) => {
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <main className="w-full max-w-md">{children}</main>
+      <main className="w-full max-w-sm">{children}</main>
     </div>
   );
 };
